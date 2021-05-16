@@ -1,0 +1,51 @@
+{
+  "name": "RSS FEED BOT",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "BOT_TOKEN": {
+      "description": "Get this value from BOT FATHER",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "APP_ID",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "API_HASH",
+      "value": ""
+    },
+    "LOG_CHANNEL": {
+      "description": "LOG_CHANNEL",
+      "value": "-100xx"
+    },
+    "FEED_URL": {
+      "description": "FEED_URL",
+      "value": "https://nyaa.si/?page=rss&c=1_2&f=0"
+    },
+    "INTERVAL": {
+      "description": "INTERVAL",
+      "value": "5"
+    },
+    "MAX_INSTANCES": {
+      "description": "MAX_INSTANCES",
+      "value": "5"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
